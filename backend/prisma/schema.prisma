@@ -1,24 +1,10 @@
-// ================================
-// PRISMA GENERATOR & DATASOURCE
-// ================================
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-}
-
-// ================================
-// ENUMS
-// ================================
-
-enum FieldType {
-  TEXT
-  DATE
-  SIGNATURE
-  CHECKBOX
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 enum ContractStatus {
@@ -30,47 +16,40 @@ enum ContractStatus {
   REVOKED
 }
 
-// ================================
-// BLUEPRINT MODELS
-// ================================
-
 model Blueprint {
-  id        String           @id @default(uuid())
+  id        String   @id @default(uuid())
   name      String
   fields    BlueprintField[]
-  createdAt DateTime         @default(now())
+  createdAt DateTime @default(now())
 }
 
 model BlueprintField {
-  id          String    @id @default(uuid())
-  blueprintId String
-  type        FieldType
+  id          String @id @default(uuid())
+  type        String
   label       String
   positionX  Int
   positionY  Int
 
-  blueprint Blueprint @relation(fields: [blueprintId], references: [id], onDelete: Cascade)
+  blueprintId String
+  blueprint   Blueprint @relation(fields: [blueprintId], references: [id])
 }
 
-// ================================
-// CONTRACT MODELS
-// ================================
-
 model Contract {
-  id          String          @id @default(uuid())
+  id          String         @id @default(uuid())
   name        String
+  status      ContractStatus
   blueprintId String
-  status      ContractStatus  @default(CREATED)
   fields      ContractField[]
-  createdAt   DateTime        @default(now())
+  createdAt   DateTime       @default(now())
 }
 
 model ContractField {
-  id               String  @id @default(uuid())
-  contractId       String
-  blueprintFieldId String
-  value            String?
+  id          String @id @default(uuid())
+  type        String
+  label       String
+  value       String?
 
-  contract Contract @relation(fields: [contractId], references: [id], onDelete: Cascade)
+  contractId String
+  contract   Contract @relation(fields: [contractId], references: [id])
 }
 
