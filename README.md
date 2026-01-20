@@ -61,3 +61,18 @@ This project is developed as part of a full-stack / frontend assignment.
 
 ## Project Structure
 
+...
+contract-management-platform/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Page-level components
+│ ├── models/ # Blueprint and Contract data models
+│ ├── utils/ # Helper functions
+│ ├── App.tsx
+│ └── main.tsx
+├── public/
+├── index.html
+├── package.json
+└── README.md
+
+...
