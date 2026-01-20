@@ -1,14 +1,75 @@
 # Contract Management Platform
 
-A full-stack contract management system with backend-enforced lifecycle workflows.
+This project is a frontend-based Contract Management Platform built from scratch to demonstrate **product thinking, UI design, state management, and clean code architecture**.
 
-## Tech Stack
-- Backend: NestJS, Prisma, MySQL
-- Frontend: React
-- Database: MySQL
+The application allows users to create reusable contract blueprints, generate contracts from those blueprints, and manage contract signing workflows.
+
+---
+
+## Objective
+
+Build a Contract Management Platform that demonstrates:
+- Component-based UI design
+- State management
+- Reusable data models
+- Controlled contract workflows
+- Clean and readable code
+
+This project is developed as part of a full-stack / frontend assignment.
+
+---
 
 ## Features
-- Blueprint management
-- Contract creation from blueprints
-- Backend-enforced contract lifecycle
-- Dashboard view
+
+### Blueprint Management
+- Create reusable contract blueprints
+- Supported field types:
+  - Text
+  - Date
+  - Signature
+  - Checkbox
+- Store field metadata:
+  - Field type
+  - Label
+  - Position (basic layout positioning)
+
+### Contract Creation
+- Create contracts from existing blueprints
+- Auto-generate contract fields from blueprint configuration
+- Maintain contract status:
+  - Draft
+  - Sent
+  - Signed
+
+### Signing Workflow
+- Simulated signature handling
+- Controlled state transitions
+- Status-based UI behavior
+
+---
+
+## Tech Stack
+
+- **Frontend Framework:** React
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Styling:** CSS
+- **Linting:** ESLint
+- **State Management:** React Hooks / Local State
+
+---
+
+## Project Structure
+
+contract-management-platform/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Page-level components
+│ ├── models/ # Blueprint and Contract data models
+│ ├── utils/ # Helper functions
+│ ├── App.tsx
+│ └── main.tsx
+├── public/
+├── index.html
+├── package.json
+└── README.md
