@@ -61,7 +61,7 @@ This project is developed as part of a full-stack / frontend assignment.
 
 ## Project Structure
 
-'''
+```
 contract-management-platform/
 ├── src/
 │ ├── components/ # Reusable UI components
@@ -75,4 +75,4 @@ contract-management-platform/
 ├── package.json
 └── README.md
 
-'''
+```
