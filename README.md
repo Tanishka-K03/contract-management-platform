@@ -1,6 +1,6 @@
 # Contract Management Platform
 
-This project is a frontend-based Contract Management Platform built from scratch to demonstrate **product thinking, UI design, state management, and clean code architecture**.
+This project is a frontend-based **Contract Management Platform** built from scratch to demonstrate **product thinking, UI design, state management, and clean code architecture**.
 
 The application allows users to create reusable contract blueprints, generate contracts from those blueprints, and manage contract signing workflows.
 
@@ -9,13 +9,14 @@ The application allows users to create reusable contract blueprints, generate co
 ## Objective
 
 Build a Contract Management Platform that demonstrates:
+
 - Component-based UI design
 - State management
 - Reusable data models
 - Controlled contract workflows
 - Clean and readable code
 
-This project is developed as part of a full-stack / frontend assignment.
+This project is developed as part of a **full-stack / frontend assignment**.
 
 ---
 
@@ -60,6 +61,8 @@ This project is developed as part of a full-stack / frontend assignment.
 ---
 
 ## Project Structure
+
+
 
 ```
 contract-management-platform/
