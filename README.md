@@ -79,3 +79,19 @@ contract-management-platform/
 └── README.md
 
 ```
+
+---
+
+## Getting Started
+
+This project uses **Vite** for fast development with Hot Module Replacement (HMR).
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/Tanishka-K03/contract-management-platform.git
+cd contract-management-platform
+npm install
+
